@@ -1,0 +1,13 @@
+<?php
+function soma($n,$n2,$n3){
+    $soma=$n+$n2+$n3;
+    return $soma;
+}
+echo"Digite um valor:";
+$n= (int)fgets (STDIN);
+echo"Digite um valor:";
+$n2= (int)fgets (STDIN);
+echo"Digite um valor:";
+$n3= (int)fgets (STDIN);
+$soma= soma($n,$n2,$n3);
+echo "O valor da soma dos números apresentados são ", $soma,"\n";
