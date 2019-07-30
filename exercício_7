@@ -1,0 +1,29 @@
+<?php
+
+echo"Digite o valor total da prestação";
+$P= (int)fgets(STDIN);
+
+    function valorpagamento($N,$N2)
+        {
+            global $P;
+            if ($N2 > 0) {
+                $valor_juros = ($P * 0.1) / 100;
+                $valor_juros2 = ($P * 3) / 100;
+                $juros = ($N2 * $valor_juros) + $valor_juros2;
+                $N = $N + $juros;
+                return $N;
+            } else {
+                return $N;
+            }
+        }
+
+        while ($P>0){
+            echo"Digite o valor a ser pago nesse mês: ";
+            $N= (float)fgets(STDIN);
+            echo"Digite a quantidade de dias que esta atrasado:";
+            $N2= (float)fgets(STDIN);
+            $valor_pago= valorpagamento($N,$N2);
+            echo"O valor pago dessa parcela foi de :" ,$valor_pago,"\n";
+            $P=$P-$valor_pago;
+            echo"O que resta a pagar: ",$P,"\n";
+        }
