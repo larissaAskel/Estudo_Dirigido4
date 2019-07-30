@@ -1,0 +1,19 @@
+<?php
+echo"Jogue os dados e digite o número que caiu: ";
+$n=(int)fgets(STDIN);
+
+if($n>0 && $n<12){
+    if($n==7 || $n==11){
+        echo "Você é um natural, GANHOUUU!!!";
+    }elseif($n==2 || $n==3 || $n==12 ){
+        echo"Voce perdeu, craps";
+    }else{
+        while($n!=7){
+            echo"Esta no ponto!";
+        echo"Jogue os dados novamente e digite o número que caiu: ";
+        $n=(int)fgets(STDIN);
+        }
+        echo"Você perdeu!!";
+    }
+
+}
