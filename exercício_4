@@ -1,0 +1,13 @@
+<?php
+function sinal($n){
+    if ($n>0){
+        echo"P";
+        return;
+    }else{
+        echo"N";
+        return;
+    }
+}
+echo"Digite um número qualquer:";
+$n=(int)fgets(STDIN);
+sinal($n);
