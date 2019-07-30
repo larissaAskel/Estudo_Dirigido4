@@ -1,0 +1,8 @@
+<?php
+function quantidadenum($N){
+    $N1 = strlen($N);
+    return $N1;
+}
+echo "\n Digite um número: ";
+$N = (string)trim(fgets(STDIN));
+echo "\n No número há um total de " . quantidadenum($N) . " caracteres. \n";
