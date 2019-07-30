@@ -1,0 +1,8 @@
+<?php
+function quantidadenum($N){
+    $N1 = strrev($N);
+    return $N1;
+}
+echo "\n Digite um número: ";
+$N = (string)trim(fgets(STDIN));
+echo "\n Os numeros invertidos:" . quantidadenum($N) . "\n";
