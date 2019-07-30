@@ -1,0 +1,12 @@
+<?php
+function somaImposto ($custo,$imposto){
+    $valor_imposto=($custo*$imposto)/100;
+    $valor_final=$custo+$valor_imposto;
+    return $valor_final;
+}
+echo"Digite o custo do item :";
+$custo=(float)fgets(STDIN);
+echo"Digite o a porcentagem de imposto do produto :";
+$imposto=(float)fgets(STDIN);
+$valor_final= somaImposto($custo,$imposto);
+echo"O valor final do produto é de :",$valor_final,"\n";
