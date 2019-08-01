@@ -1,0 +1,9 @@
+<?php
+function embaralhapalavra($N){
+    $N1 = strrev($N);
+    $N1 = strtoupper($N1);
+    return $N1;
+}
+echo "\n Digite uma palavra: ";
+$N = (string)trim(fgets(STDIN));
+echo "\n As letras invertidas:" . embaralhapalavra($N) . "\n";
