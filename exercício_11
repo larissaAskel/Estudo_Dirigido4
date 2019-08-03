@@ -1,0 +1,26 @@
+<?php
+
+if ($mes<1 || $mes>12 && $dia<1 || $dia>32){
+function extenso_mes($mes){
+	$lista_de_mes = array("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro");
+	$mes_ex = $lista_de_mes[$mes-1];
+	return $mes_ex;
+}
+function extenso_dia($dia){
+	$lista_de_dia = array("Um", "Dois", "Três", "Quatro", "Cinco", "Seis", "Sete", "Oito", "Nove", "Dez", "Onze", "Doze", "Treze", "Catorzer", "Quinze", "Dezesseis", "Dezessete", "Dezoito", "Dezenove", "Vinte", "Vinte e Um", "Vinte e Dois", "Vinte e Três", "Vinte e Quatro", "Vinte e Cinco", "Vinte e Seis", "Vinte e Sete", "Vinte e Oito", "Vinte e Nove", "Trinta", "Trinta e Um");
+	$dia_ex = $lista_de_dia[$dia-1];
+	return $dia_ex;
+}
+}
+else{
+    echo"NULL";
+}
+echo"Digite um dia:";
+$dia=(INT)fgets(STDIN);
+echo"Digite um mês:";
+$mes=(INT)fgets(STDIN);
+echo"Digite um ano:";
+$ano=(INT)fgets(STDIN);
+$mes_ex= extenso_mes($mes);
+$dia_ex= extenso_dia($dia);
+echo "O valor por extenso é ",$dia_ex," de ",$mes_ex," de ",$ano,"\n";
